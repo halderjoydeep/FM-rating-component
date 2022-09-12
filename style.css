@@ -1,0 +1,152 @@
+/**** Resetting ****/
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Colors */
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(231, 16%, 25%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  color: white;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 40px;
+  min-height: 100vh;
+  font: 15px "Overpass";
+}
+
+.container {
+  width: 80%;
+  max-width: 400px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(to top, hsl(215, 46%, 15%), hsl(223, 12%, 20%));
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-thank-you {
+  align-items: center;
+  text-align: center;
+}
+
+.icon-container {
+  width: 50px;
+  height: 50px;
+  background-color: var(--medium-grey);
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.icon-star {
+  height: 20px;
+  width: 20px;
+}
+
+.icon-thank-you {
+  height: 70px;
+  width: auto;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.desc {
+  color: var(--light-grey);
+}
+
+.rating-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.choice {
+  background-color: var(--medium-grey);
+  color: var(--light-grey);
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.choice:hover:not(.selected) {
+  background-color: var(--orange);
+  color: white;
+}
+
+button {
+  background-color: var(--orange);
+  color: white;
+  padding: 10px 20px;
+  letter-spacing: 0.6ch;
+  border-radius: 2rem;
+}
+
+button:hover {
+  background-color: white;
+  color: var(--orange);
+}
+
+.selected {
+  background-color: var(--light-grey);
+  color: white;
+}
+
+.rating-dialog {
+  color: var(--orange);
+  background-color: var(--medium-grey);
+  border-radius: 2rem;
+  padding: 10px 20px 5px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
